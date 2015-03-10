@@ -1,0 +1,40 @@
+ {
+  "manifest_version": 2,
+  "name": "chas-akkord",
+  "version": "0.1",
+    "content_scripts": [
+    {
+      "matches": [
+		"*://*.muzland.ru/*",
+		"*://*.bards.ru/*",
+		"*://*.falshivim-vmeste.ru/*",
+		"*://polnolunie.baikal.ru/*",
+		"*://*.ngavan.ru/*",
+		"*://*.guitarmusic.ru/*",
+		"*://*.amdm.ru/*",
+		"*://*.pesni.ru/*",
+		"*://*.akkords.ru/*",
+		"*://*.russrock.ru/*",
+		"*://music.kulichki.net/*",
+		"*://akkordy.su/*",
+		"*://akkordbard.ru/*",
+		"*://mirpesen.com/*",
+		"*://vopesni.ru/*",
+		"*://catalogue.musicforums.ru/*",
+//		"*://*.olegmedvedev.com/*",
+		"*://*.hm6.ru/*"
+	 ],
+      "js": [ "jquery-2.1.0.min.js","content.js"  ],
+      "all_frames":true
+    }
+  ],
+  "background": {
+  },
+  "permissions": [
+   ],
+
+      "browser_action": {
+        "default_title": "chas-akkord"
+    }
+    
+}
