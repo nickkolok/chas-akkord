@@ -28,47 +28,34 @@ function agressiveNormalize(){
 	currentTargetElement.style.padding="1em";
 }
 
+function createElementEx(tag,target,o){
+	var el=document.createElement(tag);
+	el.innerHTML=o.innerHTML;
+	el.id=o.id;
+	el.value=o.value;
+	$(el).click(o.click);
+	if(o.style){
+		el.style.width=o.style.width;
+	}
+	target.appendChild(el);
+}
+
 function createPanel(){
 	var panel=document.createElement('div');
-	panel.id="panel";
+	panel.id='panel';
 	panel.style.position='fixed';
 	panel.style.right=0;
 	panel.style.bottom=0;
 	panel.style.backgroundColor='pink';
 	panel.style.zIndex=9999999;
-	panel.style.fontSize="12px";
+	panel.style.fontSize='12px';
 
-	var but=document.createElement('button');
-	but.innerHTML='Подогнать!';
-	$(but).click(currentAutoFunction);
-	panel.appendChild(but);
-
-	var lab=document.createElement('label');
-	lab.innerHTML='Масштаб';
-	panel.appendChild(lab);
-
-	var but3=document.createElement('button');
-	but3.innerHTML='+';
-	$(but3).click(mashtabPlus);
-	but3.style.width="1.5em";
-	panel.appendChild(but3);
-
-	var but4=document.createElement('button');
-	but4.innerHTML='-';
-	$(but4).click(mashtabMinus);
-	but4.style.width="1.5em";
-	panel.appendChild(but4);
-
-	var inp=document.createElement('input');
-	inp.id='mashtab';
-	inp.style.width="3em";
-	inp.value="1";
-	panel.appendChild(inp);
-
-	var but2=document.createElement('button');
-	but2.innerHTML='Вперёд!';
-	$(but2).click(updateMashtab);
-	panel.appendChild(but2);
+	createElementEx('button', panel, {innerHTML:'Подогнать!',click:currentAutoFunction});
+	createElementEx('span'  , panel, {innerHTML:'Масштаб'   ,                         });
+	createElementEx('button', panel, {innerHTML:'+'         ,click:mashtabPlus        ,style:{width:'1.5em'}});
+	createElementEx('button', panel, {innerHTML:'-'         ,click:mashtabMinus       ,style:{width:'1.5em'}});
+	createElementEx('input' , panel, {value    :'1'                                   ,style:{width:'3em'  },id:'mashtab'});
+	createElementEx('button', panel, {innerHTML:'Вперёд!'   ,click:updateMashtab      });
 	
 	document.body.appendChild(panel);
 }
