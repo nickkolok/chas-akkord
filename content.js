@@ -19,7 +19,7 @@ function scaleTargetElement(){
 
 function forceColumns(columns){
 	columnCount=columns;
-	scaleTargetElement();
+	currentAutoFunction();
 }
 
 function agressiveNormalize(){
@@ -106,7 +106,7 @@ function polnolunie(){
 	$('#panel').remove();
 	var text=document.body.innerHTML;
 	textArray=text.split("<hr>");
-	document.body.innerHTML='<style>.twocolumn{-webkit-column-count:2;}</style>'+
+	document.body.innerHTML='<style>.twocolumn{-webkit-column-count:'+columnCount+';}</style>'+
 		'<div id="chas-akkord-wrap"><div class="twocolumn">'+
 		textArray.join('</div><hr/><hr/><div class="twocolumn">')+'</div></div>';
 	currentTargetElement=$('#chas-akkord-wrap')[0];
