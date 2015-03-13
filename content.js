@@ -17,6 +17,11 @@ function scaleTargetElement(){
 	document.getElementById('mashtab').value=Math.round(zoom*100 ) /100;
 }
 
+function forceColumns(columns){
+	columnCount=columns;
+	scaleTargetElement();
+}
+
 function agressiveNormalize(){
 	scaleTargetElement();
 	currentTargetElement.style.backgroundColor="white";
@@ -56,6 +61,9 @@ function createPanel(){
 	createElementEx('button', panel, {innerHTML:'-'         ,click:mashtabMinus       ,style:{width:'1.5em'}});
 	createElementEx('input' , panel, {value    :'1'                                   ,style:{width:'3em'  },id:'mashtab'});
 	createElementEx('button', panel, {innerHTML:'Вперёд!'   ,click:updateMashtab      });
+	createElementEx('button', panel, {innerHTML:'2'         ,click:function(){forceColumns(2);} });
+	createElementEx('button', panel, {innerHTML:'3'         ,click:function(){forceColumns(3);} });
+	createElementEx('button', panel, {innerHTML:'4'         ,click:function(){forceColumns(4);} });
 	
 	document.body.appendChild(panel);
 }
