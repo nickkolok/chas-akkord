@@ -131,6 +131,8 @@ if(document.location.href.match(/muzland/)){
 	currentTargetElement=document.body;
 }else if(document.location.href.match(/guitarmusic/)){
 	currentAutoFunction=guitarmusic;
+}else if(document.location.href.match(/igitarist/)){
+	currentTargetElement=$('blockquote')[0];
 }else if(document.location.href.match(/pesni/)){
 	currentTargetElement=$('ul#text-song > li')[1];
 	currentAutoFunction=agressiveNormalize;

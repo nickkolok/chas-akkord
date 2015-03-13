@@ -22,6 +22,8 @@
 		"*://vopesni.ru/*",
 		"*://catalogue.musicforums.ru/*",
 //		"*://*.olegmedvedev.com/*",
+//		"*://*.olegmedvedev.com/*",
+		"*://*.igitarist.ru/*",
 		"*://*.hm6.ru/*"
 	 ],
       "js": [ "jquery-2.1.0.min.js","content.js"  ],
