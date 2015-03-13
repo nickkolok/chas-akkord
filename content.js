@@ -50,18 +50,18 @@ function createPanel(){
 	var but3=document.createElement('button');
 	but3.innerHTML='+';
 	$(but3).click(mashtabPlus);
-	but3.style.width="2em";
+	but3.style.width="1.5em";
 	panel.appendChild(but3);
 
 	var but4=document.createElement('button');
 	but4.innerHTML='-';
 	$(but4).click(mashtabMinus);
-	but4.style.width="2em";
+	but4.style.width="1.5em";
 	panel.appendChild(but4);
 
 	var inp=document.createElement('input');
 	inp.id='mashtab';
-	inp.width="50";
+	inp.style.width="3em";
 	inp.value="1";
 	panel.appendChild(inp);
 
@@ -73,14 +73,18 @@ function createPanel(){
 	document.body.appendChild(panel);
 }
 
-function mashtabPlus(){
-	document.getElementById('mashtab').value=0.03+1*document.getElementById('mashtab').value;
+function incMashtab(n){
+	var el=document.getElementById('mashtab');
+	el.value=(''+(n+1*el.value)).substr(0,4);
 	updateMashtab();
 }
 
+function mashtabPlus(){
+	incMashtab(0.03);
+}
+
 function mashtabMinus(){
-	document.getElementById('mashtab').value=-0.03+1*document.getElementById('mashtab').value;
-	updateMashtab();
+	incMashtab(-0.03);
 }
 
 function updateMashtab(){
