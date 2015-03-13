@@ -64,6 +64,7 @@ function createPanel(){
 	createElementEx('button', panel, {innerHTML:'2'         ,click:function(){forceColumns(2);} });
 	createElementEx('button', panel, {innerHTML:'3'         ,click:function(){forceColumns(3);} });
 	createElementEx('button', panel, {innerHTML:'4'         ,click:function(){forceColumns(4);} });
+	createElementEx('button', panel, {innerHTML:'<>'        ,click:agressiveNormalize            });
 	
 	document.body.appendChild(panel);
 }
