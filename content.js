@@ -3,11 +3,14 @@ var currentAutoFunction=scaleTargetElement;
 var columnCount=2;
 
 function scaleTargetElement(){
+	//Костыль =(
+	currentTargetElement || ( currentTargetElement=document.getElementsByTagName('pre')[0] );
+
 	currentTargetElement.style.zIndex=9999998;
 	currentTargetElement.style.WebkitColumnCount=columnCount;
 	var zoom=Math.min(
-		document.body.clientHeight/currentTargetElement.offsetHeight,
-		document.body.offsetWidth/currentTargetElement.offsetWidth,
+		document.documentElement.clientHeight/currentTargetElement.offsetHeight,
+		document.documentElement.offsetWidth /currentTargetElement.offsetWidth ,
 		1.46
 	);
 	currentTargetElement.style.zoom=zoom;
