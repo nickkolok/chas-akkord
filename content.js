@@ -1,3 +1,30 @@
+// ==UserScript==
+// @name          ЧАС-аккорд
+// @namespace     http://www.example.com/gmscripts
+// @description   Мелкие плюшки на сайтах с аккордами
+// @include		"*://*.muzland.ru/*"
+// @include		"*://*.bards.ru/*"
+// @include		"*://*.falshivim-vmeste.ru/*"
+// @include		"*://polnolunie.baikal.ru/*"
+// @include		"*://*.ngavan.ru/*"
+// @include		"*://*.guitarmusic.ru/*"
+// @include		"*://*.amdm.ru/*"
+// @include		"*://*.pesni.ru/*"
+// @include		"*://*.akkords.ru/*"
+// @include		"*://*.russrock.ru/*"
+// @include		"*://music.kulichki.net/*"
+// @include		"*://akkordy.su/*"
+// @include		"*://akkordbard.ru/*"
+// @include		"*://mirpesen.com/*"
+// @include		"*://vopesni.ru/*"
+// @include		"*://catalogue.musicforums.ru/*"
+// @include		"*://*.igitarist.ru/*"
+// @include		"*://*.hm6.ru/*"
+// @version		0.2.0.3
+// @license		GNU GPLv3
+// @require		https://code.jquery.com/jquery-2.1.4.min.js
+// ==/UserScript==
+
 var currentTargetElement=document.getElementsByTagName('pre')[0];
 var currentAutoFunction=scaleTargetElement;
 var columnCount=2;
