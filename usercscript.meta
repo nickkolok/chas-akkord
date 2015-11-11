@@ -1,8 +1,0 @@
-// ==UserScript==
-// @name          ЧАС-аккорд
-// @namespace     http://www.example.com/gmscripts
-// @description   Мелкие плюшки на сайтах с аккордами
-// @include       http://*
-// @include       https://*
-// @version       0.2.0.3
-// ==/UserScript==
