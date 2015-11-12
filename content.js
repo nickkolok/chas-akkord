@@ -20,7 +20,7 @@
 // @match		*://catalogue.musicforums.ru/*
 // @match		*://*.igitarist.ru/*
 // @match		*://*.hm6.ru/*
-// @version		0.2.0.4
+// @version		0.2.0.5
 // @license		GNU GPLv3
 // @require		https://code.jquery.com/jquery-2.1.4.min.js
 // ==/UserScript==
