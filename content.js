@@ -2,28 +2,29 @@
 // @name          ЧАС-аккорд
 // @namespace     http://www.example.com/gmscripts
 // @description   Мелкие плюшки на сайтах с аккордами
-// @include		"*://*.muzland.ru/*"
-// @include		"*://*.bards.ru/*"
-// @include		"*://*.falshivim-vmeste.ru/*"
-// @include		"*://polnolunie.baikal.ru/*"
-// @include		"*://*.ngavan.ru/*"
-// @include		"*://*.guitarmusic.ru/*"
-// @include		"*://*.amdm.ru/*"
-// @include		"*://*.pesni.ru/*"
-// @include		"*://*.akkords.ru/*"
-// @include		"*://*.russrock.ru/*"
-// @include		"*://music.kulichki.net/*"
-// @include		"*://akkordy.su/*"
-// @include		"*://akkordbard.ru/*"
-// @include		"*://mirpesen.com/*"
-// @include		"*://vopesni.ru/*"
-// @include		"*://catalogue.musicforums.ru/*"
-// @include		"*://*.igitarist.ru/*"
-// @include		"*://*.hm6.ru/*"
-// @version		0.2.0.3
+// @match		*://*.muzland.ru/*
+// @match		*://*.bards.ru/*
+// @match		*://*.falshivim-vmeste.ru/*
+// @match		*://polnolunie.baikal.ru/*
+// @match		*://*.ngavan.ru/*
+// @match		*://*.guitarmusic.ru/*
+// @match		*://*.amdm.ru/*
+// @match		*://*.pesni.ru/*
+// @match		*://*.akkords.ru/*
+// @match		*://*.russrock.ru/*
+// @match		*://music.kulichki.net/*
+// @match		*://akkordy.su/*
+// @match		*://akkordbard.ru/*
+// @match		*://mirpesen.com/*
+// @match		*://vopesni.ru/*
+// @match		*://catalogue.musicforums.ru/*
+// @match		*://*.igitarist.ru/*
+// @match		*://*.hm6.ru/*
+// @version		0.2.0.4
 // @license		GNU GPLv3
 // @require		https://code.jquery.com/jquery-2.1.4.min.js
 // ==/UserScript==
+
 
 var currentTargetElement=document.getElementsByTagName('pre')[0];
 var currentAutoFunction=scaleTargetElement;
